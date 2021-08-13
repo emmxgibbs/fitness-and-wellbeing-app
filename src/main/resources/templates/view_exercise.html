@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/styling.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/exercise.css">
+    <link rel="stylesheet" href="../css/loginCSS.css">
+    <link rel="stylesheet" href="../css/upload.css">
+    <title>Exercise library</title>
+    <script src="../js/console_script.js"></script>
+</head>
+<body style="background-color: #DEDEDE">
+<header>
+    <nav class="nav_bar">
+        <h1 class="logo"><b>PROJECT PHYT</b></h1>
+        <ul class="nav_links">
+            <li><a href="/home">HOME</a></li>
+            <li class="current_page_link"><a href="/login">CONSOLE</a></li>
+            <!-- <li id="profilePic_ListItem"><a href="/login"><img src="profile_pic_example.png.jpeg"></a></li> -->
+        </ul>
+    </nav>
+</header>
+    <div class="tab_nav_wrapper">
+        <nav class="nav_bar" id="navBar_tabbed">
+            <ul class="nav_links">
+                <li><a class="tablink" onclick="openPage('Calender', this)"  >EXERCISE LIBRARY</a></li>
+            </ul>
+        </nav>
+
+        <nav class="nav_bar" id="navBar_dropdown">
+            <img id="currentUser_img" class="profile_img" src="https://source.unsplash.com/random">
+            <p id="currentUserTag" href="#profile">[@1] Name LastName</p>
+            <span class="dropdown_arrow"></span>
+            <!--  <select>
+                  <option><a href="/details">Personal Details</a></option>
+              </select>-->
+        </nav>
+    </div>
+
+    <div class="tabContent_wrapper" id="my_account_tabs">
+        <div id="Calender" class="tabcontent">
+            <!-- client tags will be loaded into here -->
+            <div>
+                <h1>File Library</h1>
+                <h3>Visit the URL to view your video/picture</h3>
+                <p>
+                    <a th:href="console"><input class="btn btn-dark" type="submit" value="Continue to upload"></a>
+                </p>
+
+                <div id="file-list">
+                    <table width="90%" border="1" cellpadding="5" cellspacing="0">
+                        <tr>
+                            <td>ID</td>
+                            <td>Title</td>
+                            <td>URL of file</td>
+                            <td>Description</td>
+                            <td>Operation</td>
+                        </tr>
+                        <tr th:each="Video,state:${Videos}">
+                            <td><span th:text="${Video.id}"></span> </td>
+                            <td><span th:text="${Video.title}"></span> </td>
+                            <td><span th:text="${Video.url}"></span> </td>
+                            <td><span th:text="${Video.description}"></span> </td>
+                            <td>
+                                <!--   <a class="btn btn-primary" th:href="@{/findFile(id=${Video.id})}">Edit</a>-->
+                                <a class="btn btn-danger" th:href="@{/deleteFile(id=${Video.id})}" onclick="javascript:return deleteFile();">Delete</a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<script src="../js/trainer_console_script.js"></script>
+<script src="../js/upload.js"></script>
+</body>
+</html>

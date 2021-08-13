@@ -1,0 +1,21 @@
+create table user
+(
+    id       int          not null
+        primary key,
+    email    varchar(255) null,
+    name     varchar(255) null,
+    password varchar(255) null,
+    usertype varchar(255) null
+);
+
+
+create table comment
+(
+    id           int          not null
+        primary key,
+    comment_user varchar(255) null,
+    content      varchar(255) null
+);
+
+
+

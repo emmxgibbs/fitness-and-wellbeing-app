@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/styling.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/loginCSS.css">
+    <title>Edit exercise</title>
+    <script src="js/console_script.js"></script>
+</head>
+<body>
+<header>
+    <nav class="nav_bar">
+        <h1 class="logo"><b>PROJECT PHYT</b></h1>
+        <ul class="nav_links">
+            <li><a href="/home">HOME</a></li>
+            <li class="current_page_link"><a href="/login">CONSOLE</a></li>
+            <!-- <li id="profilePic_ListItem"><a href="/login"><img src="profile_pic_example.png.jpeg"></a></li> -->
+        </ul>
+    </nav>
+</header>
+
+<div class="tabContent_wrapper" id="my_account_tabs">
+    <h1>Edit file</h1>
+    <p>
+        <a th:href="view_exercise"><input class="btn btn-dark" type="submit" value="Go back"></a>
+    </p>
+
+    <div style="margin: 0px auto; width: 500px">
+        <form action="updateFile" method="post">
+            <input name="id" type="hidden" th:value="${Video.id}"/>
+            <table>
+                <tr>
+                    <td>
+                        <label for="title">Title</label>
+                    </td>
+                    <td>
+                        <input id="title" name="title" th:value="${Video.title}"/><br/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="description">Description</label>
+                    </td>
+                    <td>
+                        <input id="description" name="description" th:value="${Video.description}"/><br/>
+                    </td>
+                </tr>
+                <tr align="center">
+                    <td colspan="2">
+                        <button type="button" id="sb">Submit</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</div>
+
+<script src="js/client_console_script.js"></script>
+<script src="js/upload.js"></script>
+</body>
+</html>

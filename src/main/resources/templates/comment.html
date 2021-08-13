@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/styling.css">
+    <!-- <link rel="stylesheet" href="../css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="../css/exercise.css">
+    <link rel="stylesheet" href="../css/loginCSS.css">
+    <link rel="stylesheet" href="../css/upload.css">
+    <title>Client Console</title>
+    <script src="../js/console_script.js"></script>
+</head>
+<body>
+<header>
+    <nav class="nav_bar">
+        <h1 class="logo"><b>PROJECT PHYT</b></h1>
+        <ul class="nav_links">
+            <li><a href="/home">HOME</a></li>
+            <li class="current_page_link"><a href="/login">CONSOLE</a></li>
+            <!-- <li id="profilePic_ListItem"><a href="/login"><img src="profile_pic_example.png.jpeg"></a></li> -->
+        </ul>
+    </nav>
+</header>
+
+<div class="main_wrapper" id="my_account_main">
+
+    <div class="tab_nav_wrapper">
+        <nav class="nav_bar" id="navBar_tabbed">
+            <ul class="nav_links">
+                <li><a class="tablink" onclick="openPage('Calender', this)">MY COMMENT</a></li>
+
+            </ul>
+        </nav>
+
+        <div class="dropdown">
+            <nav class="nav_bar" id="navBar_dropdown">
+                <img id="currentUser_img" class="profile_img" src="https://source.unsplash.com/random">
+                <p id="currentUserTag" href="#profile">[@1] Name LastName</p>
+                <span class="dropdown_arrow"></span>
+            </nav>
+            <div class="dropdown-content">
+                <!-- <a href="#">Link 1</a> -->
+                <div class="triangle"></div>
+                <ul class="dropdown_nav_links">
+                    <!--                    <li><a onclick="logout()">Account</a></li>-->
+                    <li><a onclick="logout()">Logout</a></li>
+                    <li><a onclick="openPage('Profile')">Profile</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="tabContent_wrapper" id="my_account_tabs">
+        <div id="Calendar" class="tabcontent">
+            <div class="commentDiv2">
+                <table>
+                    <thead>
+                    <tr>
+                        <td>Comment No.</td>
+                        <td>Comment content</td>
+                    </tr>
+                    </thead>
+                    <tr th:each="item,eee:${comments}">
+                        <td th:text="${item.id}"></td>
+                        <td th:text="${item.content}"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+    </div>
+    <script src="../js/trainer_console_script.js"></script>
+    <script src="../js/upload.js"></script>
+    <script src="../js/console_script.js"></script>
+</body>
+</html>

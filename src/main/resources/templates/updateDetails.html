@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml"
+      >
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <title></title>
+</head>
+<body>
+
+
+            <div class="container" >
+                <form action="/addDetails" method="get"  name="detailsForm" >
+                    <p>Update your details here:</p><br>
+                    <div class="input-group mb-3">
+                        <label class="input-group-text" for="inputGroupSelect01">Options</label>
+                        <select class="form-select" id="inputGroupSelect01" name="sex">
+                            <option selected>Choose gender</option>
+                            <option value="male">male</option>
+                            <option value="female">female</option>
+                            <option value="secret">secret</option>
+                        </select>
+                    </div>
+                    <div class="input-group mb-3" >
+                        <label class="input-group-text" for="inputGroupSelect01">Height</label>
+                        <input type="text" class="form-control"  aria-describedby="basic-addon1" name="height">
+                        <span class="input-group-text" id="basic-addon1">CM</span>
+                    </div>
+
+                    <div class="input-group mb-3" >
+                        <label class="input-group-text" for="inputGroupSelect01">Weight</label>
+                        <input type="text" class="form-control" aria-describedby="basic-addon2" >
+                        <span class="input-group-text" id="basic-addon2">KG</span>
+                    </div>
+                    <div class="input-group mb-3" >
+                        <label class="input-group-text" for="inputGroupSelect01">Options</label>
+                        <select class="form-select" id="inputGroupSelect02" name="level">
+                            <option selected>choose activity level</option>
+                            <option value="normal">Normal</option>
+                            <option value="middle">Middle</option>
+                            <option value="difficult">Difficult</option>
+                        </select>
+                    </div>
+                    <label for="basic-url" class="form-label">Your speciality</label>
+                    <div class="input-group mb-3" >
+                        <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3" name="speciality"  >
+                    </div>
+
+                    <label for="basic-url" class="form-label">Your qualification</label>
+                    <div class="input-group mb-3" >
+                        <input type="text" class="form-control" id="basic-url1" aria-describedby="basic-addon3" name="qualification">
+                    </div>
+                    <label for="basic-url" class="form-label">Your organisation</label>
+                    <div class="input-group mb-3" >
+                        <input type="text" class="form-control" id="basic-url2" aria-describedby="basic-addon3" name="organisation">
+                    </div>
+                    <div class="d-grid gap-2">
+                        <button class="btn btn-primary" type="submit" >submit</button>
+                    </div>
+                    <br>
+                    <div class="d-grid gap-2">
+                        <button class="btn btn-primary" type="submit" ><a href="/showDetails" style="color: white;text-decoration: none">show details</a></button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
