@@ -1,0 +1,151 @@
+#outer-container {
+    display: flex;
+    flex-direction: row;
+    background-color: #E5E5E5;
+    border-radius: 20px;
+}
+
+#container-heading {
+    align-self: center;
+    margin-bottom: 5px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.right-panel {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    flex: 1;
+}
+
+.heading-row {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.content-row {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: space-around;
+    flex: 1;
+}
+
+.workouts {
+    align-self: center;
+    margin: 10px;
+    padding: 15px;
+}
+
+.add-to-workout {
+    margin: auto 10px 10px;
+    align-self: center;
+}
+
+.workout-info-container {
+    color: #707070;
+    font-style: normal;
+    background-color: #E8E8E8;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    flex: 1;
+    margin: 10px;
+    padding: 10px;
+}
+
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    background-color: #E8E8E8;
+    color: #555555;
+    padding: 20px;
+}
+
+.modal-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.modal-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.modal-body {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 30%;
+    top: 25%;
+    max-height: 300px;
+    min-width: 500px;
+    overflow: auto;
+    background-color: #E5E5E5;
+    border: 1px solid #888;
+}
+
+.video-list-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.thumbnail-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    flex: 1;
+    min-height: 100%;
+}
+
+.details-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex: 2;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.workout-name {
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 20px;
+    background-color: #707070;
+    color: #E8E8E8;
+    display: flex;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+}
+

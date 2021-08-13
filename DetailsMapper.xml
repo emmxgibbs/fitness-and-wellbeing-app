@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com\team4\fitness_and_wellbeing\Dao\DetailsDao.java">
+    <select id="selectById" resultType="com\team4\fitness_and_wellbeing\model\Details.java" parameterType="String">
+        SELECT * FROM details WHERE id=#{id}
+    </select>
+    <update id="updateById">
+        UPDATE details SET sex=#{sex},
+        height=#{height},
+        weight=#{weight},
+        level=#{level},
+        speciality=#{speciality},
+        qualification=#{qualification},
+        organisation=#{organisation},
+         WHERE id=#{id}
+    </update>
+
+</mapper>

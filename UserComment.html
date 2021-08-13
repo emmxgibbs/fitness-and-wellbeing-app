@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/styling.css">
+    <link rel="stylesheet" href="../css/loginCSS.css">
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/ExercisePage.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+    <title>Client Console</title>
+    <script src="../js/trainer_console_script.js"></script>
+    <script src="../js/console_script.js"></script>
+    <script src="../js/countdown.js"></script>
+</head>
+<body>
+<header>
+    <nav class="nav_bar">
+        <h1 class="logo"><b>PROJECT PHYT</b></h1>
+        <ul class="nav_links">
+            <li><a href="/home">HOME</a></li>
+            <li class="current_page_link"><a href="/login">CONSOLE</a></li>
+            <!-- <li id="profilePic_ListItem"><a href="/login"><img src="profile_pic_example.png.jpeg"></a></li> -->
+        </ul>
+    </nav>
+</header>
+
+<div class="main_wrapper" id="my_account_main">
+    <div class="tab_nav_wrapper">
+        <nav class="nav_bar" id="navBar_tabbed">
+            <ul class="nav_links">
+                <li><a class="tablink" onclick="openPage('Program', this)">EXERCISE</a></li>
+                <li><a class="tablink" onclick="openPage('Progress', this)" id="defaultOpen">COMMENT</a></li>
+
+            </ul>
+        </nav>
+
+        <nav class="nav_bar" id="navBar_dropdown">
+            <img id="currentUser_img" class="profile_img" src="https://source.unsplash.com/random">
+            <p id="currentUserTag" href="#profile">[@1] Name LastName</p>
+            <span class="dropdown_arrow"></span>
+        </nav>
+    </div>
+
+    <div class="tabContent_wrapper" id="my_account_tabs">
+        <div id="Program" class="tabcontent">
+            <!-- client programs will be loaded into here -->
+            <div>
+                <p style="font-size: 30px;font-weight: bold">HITT Training -The Pros and cons</p>
+                <p style="font-size: 20px;"><br>
+                    Fitness Manager Nick discusses High-Intensity Interval Training (HIIT)
+                    There are many different forms of HIIT training. This kind of training has been around for a long time.
+                    Athlete’s track work,  cycling and boxing all use forms of HIIT in there training.
+                    HITT has become very fashionable in the past few years with workouts such as Insanity,
+                    Metafit and one of the originals, Tabata training.<br>
+                    This style of training was discovered by Japanese scientist Dr. Izumi Tabata and a team of researchers from the National Institute of Fitness and Sports in Tokyo.
+                    This kind of training has become so popular because of the short periods of time the sessions take, fitting in with people’s busy lifestyles. They can be performed anywhere with no equipment.
+                    There are also massive health benefits of fat burning. This is classed as EPOC, excess post-exercise oxygen consumption or simply the after burn effect. This means when theses HIIT workouts are performed correctly, with perfect technique,
+                    the body can still be burning calories up to 48 hours after the session.<br>
+                    There also cons to these kinds of classes/workouts. They are designed to be performed at a HIGH INTENSITY, which as an instructor would be my job to get 100% out of you. If you’re not working at 100%,
+                    70-80% of your Heart rate you will not reap the benefits. The main factor of these workouts is GOOD TECHNIQUE, the movements can involve a lot of jumping and plyometric moves. Make sure if you are new to this style of workout you start with basic exercises squats, press ups,
+                    lunges or always take the adapted form. Only perform these sessions 2-3 times a week to avoid over training. If you fancy a taster HIIT session come and see me, it will be the best 4 minutes of your life.
+                </p><br>
+                <button class="buttonNew button1" onclick="goExercise()">Ready to start? Click Here</button>
+            </div>
+        </div>
+        <div id="Progress" class="tabcontent">
+            <!-- comment box will be displayed here -->
+            <div class="commentDiv">
+                <nav>Leave comment here</nav>
+                <form action="addComment" method="get" class="commentForm" name="commentForm" onsubmit="submitCommentSuccess()" >
+                    <div class="form-floating">
+                    <textarea class="form-control" type="text" name="content" placeholder="please leave your comment here" id="floatingTextarea2"></textarea>
+                    <label for="floatingTextarea2">Comments</label></div>
+                    <button type="submit" class="buttonNew button1">submit</button><br>
+                        <br>
+
+                </form>
+                    <button type="button" class="buttonNew button1" onclick="showComment()">show comments</button>
+            </div>
+        </div>
+
+    </div>
+    <script src="../js/client_console_script.js"></script>
+    <script src="../js/upload.js"></script>
+    <script src="../js/nav_script.js"></script>
+</body>
+</html>

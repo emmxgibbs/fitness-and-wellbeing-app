@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Practice Form</title>
+    <link rel="stylesheet" href="../css/styling.css">
+
+</head>
+<body>
+<header>
+    <nav class="nav_bar">
+        <h1 class="logo"><b>PROJECT PHYT</b></h1>
+        <ul class="nav_links">
+            <li><a href="/public/home">HOME</a></li>
+            <li class="current_page_link"><a href="/public/console">CONSOLE</a></li>
+<!--            <li class="current_page_link"><a href="/public/userRegister">Register</a></li>-->
+        </ul>
+    </nav>
+</header>
+<div class="loginDiv">
+
+
+
+    <form  action="/public/add" method="get" class="loginForm" id="loginForm">
+        <h1 id="header1">Register</h1>
+        <br>
+        <input type="text" name="name"  placeholder="Name">
+        <input type="email" name="email" placeholder="Email">
+        <input type="password" name="password"  placeholder="Password">
+        <input type="text" name="usertype" placeholder="User Type">
+
+
+
+        <button id="submitButton" type="submit" name="continue" >continue</button>
+
+
+        <button id="submitButton" type="submit" name="continue">continue</button>
+
+    </form>
+</div>
+<footer>
+</footer>
+</body>
+</html>

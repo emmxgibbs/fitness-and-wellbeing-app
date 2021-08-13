@@ -1,0 +1,92 @@
+
+.inputDivStyle{
+    font-family: Optima;
+    font-size: 30px;
+    /*position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);*/
+    text-align: center;
+
+}
+.inputDivStyle nav{
+    background-color:pink;
+    height: inherit;
+    width: inherit;
+    text-align: center;
+    margin: 5px 5px 5px 5px;
+    font-size: 25px;
+
+}
+
+
+.inputDivStyle p{
+
+    font-size: 50px;
+    font-family: Monaco;
+
+}
+.button{
+    width: 250px;
+    height: 40px;
+
+    background-color: grey;
+    color: white;
+    font-family: Optima;
+
+}
+
+.button:hover{
+    background-color: lightgrey;
+}
+
+
+
+
+.inputDivStyle input{
+    font-size: 20px;
+    font-family: Optima;
+    text-align: left;
+    width: 250px;
+    height: 40px;
+    margin: 10px;
+    border-width: 2px;
+    border-radius: 5px;
+    border-color: black;
+}
+
+
+.inputDivStyle select{
+    font-size: 20px;
+    font-family: Optima;
+    text-align: left;
+    width: 255px;
+    height: 43px;
+    margin: 10px;
+    border-width: 2px;
+    border-radius: 5px;
+    border-color: black;
+}
+
+.bigtr td{
+    font-family: Optima;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+
+.inputStyle2{
+    font-size: 20px;
+    font-family: Optima;
+    text-align: left;
+    width: 400px;
+    height: 200px;
+    margin: 10px;
+    border-width: 2px;
+    border-radius: 5px;
+    border-color: black;
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.css"/>
+    <script src="../js/details.js"></script>
+    <script type="text/javascript" src="../jquery/jquery-3.2.1.js"></script>
+    <script type="text/javascript" src="../bootstrap/js/bootstrap.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/index.css"/>
+</head>
+<body>
+
+<div>
+    
+</div>
+
+
+
+
+<div name="fragment">
+    <form class="form-group" style="margin-left: 28%;" th:fragment="info">
+        <div class="form-inline">
+            <label>Personal ID：</label>&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="text" class="form-control" name="id" th:value="${session.details.getId()}"  />
+        </div><br/>
+        <div class="form-inline">
+            <label>sex</label>&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="text" class="form-control" name="sex" th:value="${session.details.getSex()}"/>
+        </div><br/>
+        <div class="form-inline">
+            <label>height</label>&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="text" class="form-control" name="height" th:value="${session.details.getHeight()}"/>
+        </div><br/>
+        <div class="form-inline">
+            <label>weight</label>&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="text" class="form-control" name="weight" th:value="${session.details.getWeight()}"/>
+        </div><br/>
+        <div class="form-inline">
+            <label>Activity level</label>&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="text" class="form-control" name="level" th:value="${session.details.getLevel()}"/>
+        </div><br/>
+        <div class="form-inline">
+            <label>speciality</label>&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="text" class="form-control" name="speciality" th:value="${session.details.getSpeciality()}"/>
+        </div><br/>
+        <div class="form-inline">
+            <label>qualification</label>&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="text" class="form-control" name="qualification" th:value="${session.details.getQualification()}"/>
+        </div><br/>
+        <div class="form-inline">
+            <label>organisation</label>&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="text" class="form-control" name="organisation" th:value="${session.details.getOrganisation()}"/>
+        </div><br/>
+        <div class="form-inline">
+            <input type="button" name="restart" class="btn btn-default" value="reset"/>
+
+            <input type="button" name="save" class="btn btn-primary" value="save"  />
+        </div>
+    </form>
+</div>
+
+
+</body>
+</html>

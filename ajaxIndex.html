@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>picture upload</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+</head>
+<body>
+<div class="container">
+<h1>upload images here</h1>
+    <form action="/imageUpload" method="post" enctype="multipart/form-data">
+
+        <div class="input-group mb-3">
+            <label class="input-group-text" for="inputGroupFile01">Upload</label>
+            <input type="file" name="fileName" class="form-control" id="inputGroupFile01 filename" accept="image/png, image/jpeg, image/jpg" onchange="checkImage()">
+        </div>
+        <button type="submit" class="btn btn-secondary btn-lg" id="submitBtn" onclick="checkSubmit()" value="submit">submit</button>
+    </form>
+</div>
+
+
+
+
+<div id="showImage"></div>
+<div id="onLoadImage"></div>
+</body>
+<script src="/webjars/jquery/3.3.1/jquery.min.js"></script>
+<script src="/webjars/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+<script src="../js/uploadImg.js"></script>
+</html>

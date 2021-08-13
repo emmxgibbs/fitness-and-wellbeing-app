@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>multiple picture upload</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+</head>
+<body>
+<div class="container">
+    <h1>upload file here</h1>
+    <form name="form" id="form" action="/multipleImageUpload" method="post" enctype="multipart/form-data">
+
+        <div class="input-group mb-3">
+            <input type="file" class="form-control" id="inputGroupFile02 filename"  accept="image/png, image/jpeg, image/jpg" name="fileName" multiple="multiple" onchange="multiCheckImage(this)">
+            <label class="input-group-text">Upload</label>
+        </div>
+
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+            <button class="btn btn-primary me-md-2" type="submit" onclick="multiCheckSubmit()" id="submitBtn">submit</button>
+        </div>
+    </form>
+</div>
+
+
+
+
+
+
+<div id="onLoadImage">
+
+</div>
+</body>
+<script src="/webjars/jquery/3.3.1/jquery.min.js"></script>
+<script src="../js/uploadImg.js"></script>
+</html>

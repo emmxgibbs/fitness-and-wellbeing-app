@@ -1,0 +1,135 @@
+<!doctype html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8">
+  <title>Exercise</title>
+
+  <link rel="stylesheet" href="../css/styling.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="../css/consolestyle.css">
+  <script src="../js/client_console_script.js"></script>
+  <script src="../js/trainer_console_script.js"></script>
+
+  <script src="../js/upload.js"></script>
+  <script src="../js/countdown.js"></script>
+  <script src="../js/console_script.js"></script>
+  <link rel="stylesheet" href="../css/ExercisePage.css">
+  <link rel="stylesheet" href="../css/loginCSS.css">
+  <link rel="stylesheet" href="../css/font-awesome.min.css">
+
+</head>
+<body style="background-color: #DEDEDE">
+
+
+  <div class="container">
+    <h1>PHYT</h1>
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"></li>
+        <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"></li>
+        <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"></li>
+        <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"></li>
+        <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="http://localhost:8080/images/pic3.jpg" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>First slide label</h5>
+            <p>
+              Ten thousand reasons can be found for giving up, and only one belief is needed to persist!</p>
+          </div>
+        </div>
+        <div class="carousel-item" >
+          <img src="http://localhost:8080/images/pic1.jpg" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Second slide label</h5>
+            <p>Either sweat like rain or go home.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="http://localhost:8080/images/pic2.jpg" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Third slide label</h5>
+            <p>When you want to give up, think about why it started?</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="http://localhost:8080/images/1.jpeg" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Forth slide label</h5>
+            <p>I have worked hard, no matter whether I succeed or not, I do not regret it.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="http://localhost:8080/images/2.jpeg" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Fifth slide label</h5>
+            <p>If you quit halfway, don’t come back again-to those who gave up</p>
+          </div>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </a>
+    </div>
+
+
+
+
+
+
+    <div id="light" class="pop_win">
+      <nav id="title" ></nav>
+      <a href = "javascript:void(0)" onclick = "closeWin();" style="float: bottom;text-decoration: none">close</a>
+
+    </div>
+    <div id="fade" class="black_overlay"></div>
+
+
+
+      <div align="center">
+        <button class="buttonNew button1" onclick="popWin()"><a href = "javascript:void(0)" class="hlink" >Countdown start</a></button>
+        <button class="buttonNew button1" onclick="returnpage()"><a href="/console">Return?</a></button>
+        <button class="buttonNew button1" onclick="popWin1()"><a href="javascript:void(0)" class="hlink" >Make a comment?</a></button>
+      </div>
+
+
+    <div id="light1" class="pop_win1">
+
+      <a href = "javascript:void(0)" onclick = "closeWin1();" style="float: right;text-decoration: none">[x]</a><br>
+      <div align="center">
+
+        <nav>Leave comment here</nav>
+        <form action="addComment" method="get" class="commentForm" name="commentForm" onsubmit="submitCommentSuccess()" >
+          <div class="form-floating">
+            <textarea class="form-control" type="text" name="content" placeholder="please leave your comment here" id="floatingTextarea2"></textarea>
+            <label for="floatingTextarea2">Comments</label></div>
+
+          <button type="submit" class="buttonNew button1">submit</button><br>
+          <button type="button" class="buttonNew button1" onclick="showComment()">show comments</button>
+
+        </form>
+      </div>
+
+    </div>
+    <div id="fade1" class="black_overlay"></div>
+
+  </div>
+
+
+  <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+  <script src="../js/nav_script.js"></script>
+  <script src="../js/jquery.slides.min.js"></script>
+<script src="../js/console_script.js"></script>
+
+</body>
+</html>

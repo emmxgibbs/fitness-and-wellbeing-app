@@ -1,0 +1,74 @@
+
+.inputDivStyle{
+    font-family: Optima;
+    font-size: 160px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+
+    text-align: center;
+
+
+}
+
+
+.inputStyle1{
+    font-size: 20px;
+    font-family: Optima;
+    text-align: left;
+    width: 250px;
+    height: 40px;
+    margin: 10px;
+    border-width: 2px;
+    border-radius: 5px;
+    border-color: black;
+}
+
+
+.inputStyle2{
+    font-size: 20px;
+    font-family: Optima;
+    text-align: left;
+    width: 400px;
+    height: 200px;
+    margin: 10px;
+    border-width: 2px;
+    border-radius: 5px;
+    border-color: black;
+}
+.p1{
+    font-size: 60px;
+    font-family: "Times New Roman";
+    color: white;
+}
+
+
+.formStyle{
+    background-color: white;
+
+    padding: 20px;
+    margin: 20px;
+
+}
+
+.button{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: grey;
+    color: pink;
+
+
+}
+
+.button:hover{
+    background-color: lightgrey;
+}
+
+
+

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/styling.css">
+    <!-- <link rel="stylesheet" href="../css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="../css/exercise.css">
+    <link rel="stylesheet" href="../css/loginCSS.css">
+    <link rel="stylesheet" href="../css/upload.css">
+    <link rel="stylesheet" href="../css/createRoutineCSS.css">
+    <title>Client Console</title>
+    <script src="../js/console_script.js"></script>
+</head>
+
+<script src="../js/console_script.js"></script>
+
+<body>
+<header>
+    <nav class="nav_bar">
+        <a href="/home"><h1 class="logo"><b>PROJECT PHYT</b></h1></a>
+        <ul class="nav_links">
+            <li><a href="/home">HOME</a></li>
+            <li class="current_page_link"><a href="/login">CONSOLE</a></li>
+            <!-- <li id="profilePic_ListItem"><a href="/login"><img src="profile_pic_example.png.jpeg"></a></li> -->
+        </ul>
+    </nav>
+</header>
+
+<div class="main_wrapper" id="my_account_main">
+    <div class="tab_nav_wrapper">
+        <nav class="nav_bar" id="navBar_tabbed">
+            <ul class="nav_links">
+                <li><a class="tablink" onclick="openPage('Clients', this)" id="defaultOpen">CLIENTS</a></li>
+                <li><a class="tablink" onclick="openPage('Exercise', this)">EXERCISES</a></li>
+
+                <li><a class="tablink" onclick="openPage('Routines', this)">ROUTINES</a></li>
+            </ul>
+        </nav>
+        <div class="dropdown">
+            <nav class="nav_bar" id="navBar_dropdown">
+                <img id="currentUser_img" class="profile_img" src="https://source.unsplash.com/random">
+                <p id="currentUserTag" href="#profile">[@1] Name LastName</p>
+                <span class="dropdown_arrow"></span>
+            </nav>
+            <div class="dropdown-content">
+                <!-- <a href="#">Link 1</a> -->
+                <div class="triangle"></div>
+                <ul class="dropdown_nav_links">
+<!--                    <li><a onclick="logout()">Account</a></li>-->
+                    <li><a onclick="logout()">Logout</a></li>
+                    <li><a onclick="showProfile()">Profile</a></li>
+                    <li><a onclick="showComment()">View Comments</a> </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="tabContent_wrapper" id="my_account_tabs">
+        <div id="Clients" class="tabcontent">
+            <!-- client tags will be loaded into here -->
+        </div>
+
+
+
+        <div id="Exercise" class="tabcontent">
+            <div id="page-heading">
+                <h2>Upload Exercises</h2>
+            </div>
+
+            <div id="form-upload">
+                <form action="" method="post" enctype="multipart/form-data" name="form1">
+                    <table width="60%" border="1" cellspacing="0" cellpadding="5">
+                        <td>Choose file:</td>
+                        <td>
+                            <input type="file" name="fileName" id="fileChoose">
+                        </td>
+                        <tr>
+                            <td>Title:</td>
+                            <td>
+                                <input type="text" required="required" name="title" id="title">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Description:</td>
+                            <td>
+                                <input type="text" required="required" name="description" id="description">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="4" align="center">
+                                <input type="submit" name="sbt" id="sbt" value="Submit" onclick="upload1()">
+                                <input type="submit" name="View" id="viewFile1" value="View the file library" onclick="search1()">
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+
+<!--            <div id="form-search">-->
+<!--                <form action="search" id="viewFile">-->
+<!--                    <table>-->
+<!--                        <tr>-->
+<!--                            <td colspan="4" align="center">-->
+<!--                                <input type="submit"  name="View" id="viewFile1" value="View the file library">-->
+<!--                            </td>-->
+<!--                        </tr>-->
+<!--                    </table>-->
+<!--                </form>-->
+<!--            </div>-->
+        </div>
+
+
+        <div id="Routines" class="tabcontent">
+            <!-- Trainer's routines will be loaded into here and edit functions -->
+
+            <div id="workout-info" class="right-panel">
+                <div class="heading-row">
+                    <h2 id="container-heading">Trainer X's Routines</h2>
+                    <p> Add or remove videos from your routines</p>
+                </div>
+
+                <div class="content-row">
+                    <!-- Workout info will be loaded here -->
+                    <div class="workout-info-container">
+                        <h3 class="workouts" id="workout-one">LEGS</h3>
+
+                        <div id="blob-one" class="workout-name">
+                            <h4>SQUATS</h4>
+                        </div>
+
+                        <div id="blob-two" class="workout-name">
+                            <h4>CALF RAISES</h4>
+                        </div>
+
+                        <div id="blob-three" class="workout-name">
+                            <h4>LUNGES</h4>
+                        </div>
+
+                        <div id="blob-four" class="workout-name">
+                            <h4>SIDE LEG RAISES</h4>
+                        </div>
+
+                        <div id="blob-five" class="workout-name">
+                            <h4>SIDE-TO-SIDE LUNGES</h4>
+                        </div>
+
+                        <div id="blob-six" class="workout-name">
+                            <h4>SQUAT HOLD</h4>
+                        </div>
+                        <button id="button" class="add-to-workout" onclick="openModal()">+</button>
+                    </div>
+
+                    <div class="workout-info-container">
+                        <h3 class="workouts" id="workout-two">ABS</h3>
+
+                        <div id="blob-seven" class="workout-name">
+                            <h4>HIGH CRUNCHES</h4>
+                        </div>
+
+                        <div id="blob-eight" class="workout-name">
+                            <h4>LEG RAISES</h4>
+                        </div>
+
+                        <div id="blob-nine" class="workout-name">
+                            <h4>RAISED LEG CIRCLES</h4>
+                        </div>
+
+                        <div id="blob-ten" class="workout-name">
+                            <h4>RAISED LEG HOLD</h4>
+                        </div>
+
+                        <div id="blob-eleven" class="workout-name">
+                            <h4>FLUTTER KICKS</h4>
+                        </div>
+
+                        <div id="blob-twelve" class="workout-name">
+                            <h4>SCISSORS</h4>
+                        </div>
+                        <button id="button1" class="add-to-workout" onclick="openModal()">+</button>
+                    </div>
+
+                    <div class="workout-info-container">
+                        <h3 class="workouts" id="workout-three">HIIT!</h3>
+
+                        <div id="blob-thirteen" class="workout-name">
+                            <h4>HIGH KNEES</h4>
+                        </div>
+
+                        <div id="blob-fourteen" class="workout-name">
+                            <h4>CLIMBERS</h4>
+                        </div>
+
+                        <div id="blob-fifteen" class="workout-name">
+                            <h4>HIGH KNEES</h4>
+                        </div>
+
+                        <div id="blob-sixteen" class="workout-name">
+                            <h4>PLANK CRUNCHES</h4>
+                        </div>
+
+                        <div id="blob-seventeen" class="workout-name">
+                            <h4>PLANK HOLD</h4>
+                        </div>
+
+                        <div id="blob-eighteen" class="workout-name">
+                            <h4>PLANK CRUNCHES</h4>
+                        </div>
+
+                        <div id="blob-nineteen" class="workout-name">
+                            <h4>JUMP SQUATS</h4>
+                        </div>
+
+                        <div id="blob-twenty" class="workout-name">
+                            <h4>JUMPING JACKS</h4>
+                        </div>
+
+                        <div id="blob-twenty-one" class="workout-name">
+                            <h4>JUMP SQUATS</h4>
+                        </div>
+                        <button id="button2" class="add-to-workout" onclick="openModal()">+</button>
+                    </div>
+
+                    <div class="workout-info-container">
+
+                        <button id="button3" class="add-to-workout" onclick="openModal()">+</button>
+                    </div>
+
+                    <div class="workout-info-container">
+                        <button id="button4" class="add-to-workout" onclick="openModal()">+</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- make a modal that will show all exercises that have been uploaded by this trainer -->
+        <div id="create-modal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4>Add to routine</h4>
+                    <span onclick="closeModal()" class="close">&times;</span>
+                </div>
+
+                <div class="modal-body">
+                    <p>Add or remove videos from your routine</p>
+                    <div id="video-list"></div>
+                </div>
+
+                <div class="modal-footer">
+                    <input type="submit" value="Create" onclick="sendRoutineToServer()">
+                </div>
+            </div>
+        </div>
+
+        <div id="ClientInfo" class="tabcontent">
+            <!-- Client info will be loaded into here -->
+            <!-- user information-->
+            <div class="profile_info_container">
+                <img id="clientInfoProfile_img" class="profile_img" src="https://source.unsplash.com/random">
+                <p id="client_name">CLINT CLIENTMAN</p>
+            </div>
+            <nav class="nav_bar clientInfo_nav_wrapper">
+                <ul class="nav_links_vertical">
+                    <li><a class="tablink" onclick="openPage('ClientInfo', this)">WORKOUTS</a></li>
+                    <li><a class="tablink" onclick="profile()">PROFILE</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>
+<script src="../js/trainer_console_script.js"></script>
+<script src="../js/upload.js"></script>
+<script src="../js/nav_script.js"></script>
+</body>
+<script src="../js/createRoutine.js"></script>
+</html>
